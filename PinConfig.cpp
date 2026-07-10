@@ -1,4 +1,3 @@
-#include "Arduino.h"
 #include "PinConfig.h"
 
 namespace PinConfig {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <Arduino.h>
+
 namespace PinConfig {
   inline constexpr uint8_t LEVER_POT = 0;
   inline constexpr uint8_t LEVER_BUTTON = 0;
