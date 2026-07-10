@@ -15,4 +15,4 @@ class GamepadManager {
 
     void begin();
     void send();
-}
+};
