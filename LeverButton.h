@@ -13,4 +13,4 @@ class LeverButton {
 
     void begin();
     void update();
-}
+};

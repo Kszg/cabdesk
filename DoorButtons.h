@@ -16,4 +16,4 @@ class DoorButtons {
 
     void begin();
     void update();
-}
+};

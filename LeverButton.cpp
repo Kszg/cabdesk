@@ -1,3 +1,4 @@
+#include "PinConfig.h"
 #include "LeverButton.h"
 
 LeverButton::LeverButton(GamepadManager* gamepadManagerRef) {
@@ -9,5 +10,5 @@ void LeverButton::begin() {
 }
 
 void LeverButton::update() {
-  _gamepadManager->leverButton = (digitalRead(PinConfig::LeverButton) == LOW);
+  _gamepadManager->leverButton = (digitalRead(PinConfig::LEVER_BUTTON) == LOW);
 }
