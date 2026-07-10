@@ -13,4 +13,7 @@ namespace LeverConfig {
   constexpr int8_t AXIS_BRAKING_MAX = 0;
   constexpr int8_t AXIS_BRAKING_MIN = 0;
   constexpr int8_t AXIS_EBRAKE_VALUE = 0;
+
+  constexpr int8_t AXIS_MIN = -100;
+  constexpr int8_t AXIS_MAX = 100;
 }
