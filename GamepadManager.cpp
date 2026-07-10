@@ -10,13 +10,19 @@ GamepadManager::GamepadManager() : _joystick(
     false, false, false   // Accelerator, brake, steering
 ) {}
 
+void GamepadManager::setThrottleAxis(int8_t value) {
+  if (value > LeverConfig::AXIS_MAX) _throttleAxis = LeverConfig::AXIS_MAX;
+  else if (value < LeverConfig::AXIS_MIN) _throttleAxis = LeverConfig::AXIS_MIN;
+  else _throttleAxis = value;
+}
+
 void GamepadManager::begin() {
   _joystick.begin();
-  _joystick.setXAxisRange(-100, 100);
+  _joystick.setXAxisRange(LeverConfig::AXIS_MIN, LeverConfig::AXIS_MAX);
 }
 
 void GamepadManager::send() {
-  _joystick.setXAxis(throttleAxis);
+  _joystick.setXAxis(_throttleAxis);
   _joystick.setButton(0, leverButton);
   _joystick.setButton(1, doorsL);
   _joystick.setButton(2, doorsR);
