@@ -16,11 +16,8 @@ void DoorButtons::update() {
   bool rightPressed = (digitalRead(PinConfig::DOOR_R) == LOW);
 
   if (closePressed && (_leftOpen || _rightOpen || _closePressedLastFrame)) {
-    _gamepadManager->doorsL = leftPressed;
-    _gamepadManager->doorsR = rightPressed;
-
-    _leftOpen = false;
-    _rightOpen = false;
+    _gamepadManager->doorsL = _leftOpen;
+    _gamepadManager->doorsR = _rightOpen;
   }
   else {
     _gamepadManager->doorsL = false;
@@ -33,8 +30,13 @@ void DoorButtons::update() {
 
     if (rightPressed) {
       _gamepadManager->doorsR = true;
-      _leftOpen = true;
+      _rightOpen = true;
     }
+  }
+
+  if (_closePressedLastFrame && !closePressed) {
+    _leftOpen = false;
+    _rightOpen = false;
   }
 
   _closePressedLastFrame = closePressed;
