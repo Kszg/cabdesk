@@ -1,6 +1,6 @@
 #include "DoorButtons.h"
 
-GamepadManager::GamepadManager(GamepadManager* gamepadManagerRef) {
+DoorButtons::DoorButtons(GamepadManager* gamepadManagerRef) {
   _gamepadManager = gamepadManagerRef;
 }
 
