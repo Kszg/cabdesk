@@ -4,7 +4,6 @@
 #include "PinConfig.h"
 #include "LeverConfig.h"
 #include "GamepadManager.h"
-#include "LeverAxis.h"
 
 class LeverAxis {
   private:
