@@ -5,7 +5,7 @@ namespace LeverConfig {
   constexpr uint16_t POT_TRACTION_MAX = 750;
   constexpr uint16_t POT_BRAKING_MAX = 512;
   constexpr uint16_t POT_BRAKING_MIN = 335;
-  constexpr uint16_t POT_EBRAKE_MIN = 320;
+  constexpr uint16_t POT_EBRAKE_MAX = 320;
 
   constexpr int8_t AXIS_TRACTION_MIN = 15;
   constexpr int8_t AXIS_TRACTION_MAX = 100;

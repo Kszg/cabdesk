@@ -22,7 +22,7 @@ void LeverAxis::update() {
     axisValue = map(potValue, LeverConfig::POT_TRACTION_MIN, LeverConfig::POT_TRACTION_MAX, LeverConfig::AXIS_TRACTION_MIN, LeverConfig::AXIS_TRACTION_MAX);
   }
   else if (potValue <= LeverConfig::POT_BRAKING_MAX) { // Braking
-    if (potValue <= LeverConfig::POT_EBRAKE_MIN) axisValue = LeverConfig::AXIS_EBRAKE_VALUE;
+    if (potValue <= LeverConfig::POT_EBRAKE_MAX) axisValue = LeverConfig::AXIS_EBRAKE_VALUE;
     else {
       axisValue = map(potValue, LeverConfig::POT_BRAKING_MIN, LeverConfig::POT_BRAKING_MAX, LeverConfig::AXIS_BRAKING_MIN, LeverConfig::AXIS_BRAKING_MAX);
     }
